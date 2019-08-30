@@ -1,0 +1,21 @@
+{
+    "name": "cekta/http-server",
+    "description": "",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Evgeniy Kuvshinov",
+            "email": "smpl@itmywork.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "cekta/routing": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cekta\\HTTP\\Server\\": "src/"
+        }
+    }
+}
