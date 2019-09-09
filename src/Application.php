@@ -24,6 +24,9 @@ class Application implements RequestHandlerInterface
     {
         $route = $this->matcher->match($request);
         $pipeline = new Pipeline($route->getHandler(), ...$route->getMiddlewares());
-        return $pipeline->handle($route->getRequest());
+        foreach ($route->getAttributes() as $key => $value) {
+            $request = $request->withAttribute($key, $value);
+        }
+        return $pipeline->handle($request);
     }
 }
