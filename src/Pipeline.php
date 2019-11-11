@@ -15,7 +15,7 @@ class Pipeline implements RequestHandlerInterface
      * @var RequestHandlerInterface
      */
     private $handler;
-/**
+    /**
      * @var MiddlewareInterface[]
      */
     private $middlewareInterfaces;
