@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Cekta\HTTP\Server;
@@ -20,21 +21,18 @@ class SapiEmitter
         }
 
         $this->emitHeaders($response);
-
         header(sprintf(
             'HTTP/%s %d%s',
             $response->getProtocolVersion(),
             $response->getStatusCode(),
             ($response->getReasonPhrase() ? ' ' . $response->getReasonPhrase() : '')
         ), true, $response->getStatusCode());
-
         echo $response->getBody();
     }
 
     private function emitHeaders(ResponseInterface $response): void
     {
         $statusCode = $response->getStatusCode();
-
         foreach ($response->getHeaders() as $header => $values) {
             $name = ucwords($header, '-');
             $replace = $name === 'Set-Cookie' ? false : true;

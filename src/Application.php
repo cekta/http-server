@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Cekta\HTTP\Server;
@@ -14,7 +15,6 @@ class Application implements RequestHandlerInterface
      * @var MatcherInterface
      */
     private $matcher;
-
     public function __construct(MatcherInterface $matcher)
     {
         $this->matcher = $matcher;

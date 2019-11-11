@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Cekta\HTTP\Server\Exception;
@@ -12,5 +13,4 @@ class OutputSent extends RuntimeException implements ExceptionInterface
     {
         parent::__construct('Output has been emitted previously');
     }
-
 }
