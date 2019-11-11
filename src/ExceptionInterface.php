@@ -6,6 +6,4 @@ namespace Cekta\HTTP\Server;
 
 interface ExceptionInterface extends \Throwable
 {
-
-
 }
