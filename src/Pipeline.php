@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Cekta\HTTP\Server;
@@ -18,7 +19,6 @@ class Pipeline implements RequestHandlerInterface
      * @var MiddlewareInterface[]
      */
     private $middlewareInterfaces;
-
     public function __construct(RequestHandlerInterface $handler, MiddlewareInterface ...$middlewareInterfaces)
     {
         $this->handler = $handler;
