@@ -11,8 +11,10 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "cekta/routing": "@dev",
-        "quizlabs/php_codesniffer": "^3.5"
+        "cekta/routing": "@dev"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5"
     },
     "autoload": {
         "psr-4": {
