@@ -16,7 +16,7 @@ class Pipeline implements RequestHandlerInterface
      */
     private $handler;
     /**
-     * @var MiddlewareInterface[]
+     * @var array<MiddlewareInterface>
      */
     private $middlewareInterfaces;
     public function __construct(RequestHandlerInterface $handler, MiddlewareInterface ...$middlewareInterfaces)
