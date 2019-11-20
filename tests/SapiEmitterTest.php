@@ -12,6 +12,7 @@ class SapiEmitterTest extends TestCase
     {
         $this->expectException(TypeError::class);
         $emitter = new SapiEmitter();
-        $emitter->emit('invalid responce');
+        $emitter->emit('invalid response');
     }
 }
+
